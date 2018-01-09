@@ -1,0 +1,7 @@
+C:\Users\Linas\Documents\Visual Studio 2017\Projects\PuzzleSlider\PuzzleSlider\bin\Debug\PuzzleSlider.exe.config
+C:\Users\Linas\Documents\Visual Studio 2017\Projects\PuzzleSlider\PuzzleSlider\bin\Debug\PuzzleSlider.exe
+C:\Users\Linas\Documents\Visual Studio 2017\Projects\PuzzleSlider\PuzzleSlider\bin\Debug\PuzzleSlider.pdb
+C:\Users\Linas\Documents\Visual Studio 2017\Projects\PuzzleSlider\PuzzleSlider\obj\Debug\PuzzleSlider.csprojResolveAssemblyReference.cache
+C:\Users\Linas\Documents\Visual Studio 2017\Projects\PuzzleSlider\PuzzleSlider\obj\Debug\PuzzleSlider.csproj.CoreCompileInputs.cache
+C:\Users\Linas\Documents\Visual Studio 2017\Projects\PuzzleSlider\PuzzleSlider\obj\Debug\PuzzleSlider.exe
+C:\Users\Linas\Documents\Visual Studio 2017\Projects\PuzzleSlider\PuzzleSlider\obj\Debug\PuzzleSlider.pdb
