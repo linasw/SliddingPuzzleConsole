@@ -8,8 +8,8 @@ namespace PuzzleSlider
 {
     class Program
     {
-        private static string[,] gameGrid = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", " "} };
-        private static string[,] completedGrid = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", " " } };
+        private static string[,] gameGrid = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", ""} };
+        private static string[,] completedGrid = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "" } };
         private static int[] emptyPos = { 0, 0 };
         private static Random rnd = new Random();
 
@@ -170,10 +170,10 @@ namespace PuzzleSlider
 
         public static void FindEmptyElement(string[,] gameGrid, int[] emptyPos)
         {
-            for (int i = 0; i < 2; i++)
-                for (int n = 0; n < 2; n++)
+            for (int i = 0; i <= 2; i++)
+                for (int n = 0; n <= 2; n++)
                 {
-                    if (gameGrid[i, n].Equals(" "))
+                    if (gameGrid[i, n].Equals(""))
                     {
                         emptyPos[0] = i;
                         emptyPos[1] = n;
