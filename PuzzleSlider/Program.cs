@@ -8,15 +8,15 @@ namespace PuzzleSlider
 {
     class Program
     {
-        private static string[,] gameGrid = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", ""} };
-        private static string[,] completedGrid = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "" } };
+        private static string[,] gameGrid = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", " "} };
+        private static string[,] completedGrid = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", " " } };
         private static int[] emptyPos = { 0, 0 };
         private static Random rnd = new Random();
 
         static void Main(string[] args)
         {
             Shuffle(rnd, gameGrid);
-            FindEmptyElement();
+            FindEmptyElement(gameGrid, emptyPos);
             do
             {
                 Draw(gameGrid);         
@@ -33,7 +33,7 @@ namespace PuzzleSlider
                         if (Char.ToLower(answer.KeyChar) == 'y')
                         {
                             Shuffle(rnd, gameGrid);
-                            FindEmptyElement();
+                            FindEmptyElement(gameGrid, emptyPos);
                             break;
                         }
 
@@ -87,7 +87,8 @@ namespace PuzzleSlider
                     Slide(key.KeyChar);
                     break;
                 case 'r':
-                    //SHUFFLE
+                    Shuffle(rnd, gameGrid);
+                    FindEmptyElement(gameGrid, emptyPos);
                     break;
                 case 'q':
                     Environment.Exit(0);
@@ -148,7 +149,7 @@ namespace PuzzleSlider
             emptyPos[1] = nToSwap;
         }
 
-        public static void Shuffle<T>(Random random, T[,] array)
+        public static void Shuffle<T>(Random random, T[,] array) //Fisher-Yates algorithm
         {
             int lengthRow = array.GetLength(1);
 
@@ -167,15 +168,16 @@ namespace PuzzleSlider
             }
         }
 
-        public static void FindEmptyElement()
+        public static void FindEmptyElement(string[,] gameGrid, int[] emptyPos)
         {
             for (int i = 0; i < 2; i++)
                 for (int n = 0; n < 2; n++)
                 {
-                    if (gameGrid[i, n] == "")
+                    if (gameGrid[i, n].Equals(" "))
                     {
                         emptyPos[0] = i;
                         emptyPos[1] = n;
+                        return;
                     }
                 }
         }
