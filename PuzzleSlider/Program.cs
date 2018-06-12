@@ -12,6 +12,7 @@ namespace PuzzleSlider
 
         private static void Main(string[] args)
         {
+            game = new Game();
             game.Play();
         }
     }
